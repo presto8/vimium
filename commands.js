@@ -80,6 +80,7 @@ function clearKeyMappingsAndSetDefaults() {
   mapKeyToCommand('k', 'scrollUp');
   mapKeyToCommand('h', 'scrollLeft');
   mapKeyToCommand('l', 'scrollRight');
+  mapKeyToCommand('gi', 'focusFirstInput');
   mapKeyToCommand('gg', 'scrollToTop');
   mapKeyToCommand('G', 'scrollToBottom');
   mapKeyToCommand('<c-e>', 'scrollDown');
@@ -125,6 +126,7 @@ addCommand('scrollDown',          'Scroll down');
 addCommand('scrollUp',            'Scroll up');
 addCommand('scrollLeft',          'Scroll left');
 addCommand('scrollRight',         'Scroll right');
+addCommand('focusFirstInput',     'Focus the first text input or search box');
 addCommand('scrollToTop',         'Scroll to the top of the page');
 addCommand('scrollToBottom',      'Scroll to the bottom of the page');
 addCommand('scrollPageDown',      'Scroll a page down');
@@ -166,7 +168,7 @@ addCommand('restoreTab',          "Restore closed tab", true);
 // be shown in the help page.
 var commandGroups = {
   pageNavigation:
-    ["scrollDown", "scrollUp", "scrollLeft", "scrollRight",
+    ["scrollDown", "scrollUp", "scrollLeft", "scrollRight", "focusFirstInput",
      "scrollToTop", "scrollToBottom", "scrollPageDown", "scrollPageUp", "scrollFullPageDown",
      "reload", "toggleViewSource", "zoomIn", "zoomOut", "copyCurrentUrl", "goUp",
      "enterInsertMode", "activateLinkHintsMode", "activateLinkHintsModeToOpenInNewTab",
